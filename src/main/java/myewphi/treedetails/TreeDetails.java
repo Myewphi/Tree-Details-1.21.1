@@ -70,7 +70,7 @@ public class TreeDetails {
             case WEST -> { return WEST; }
             case UP -> { return UP; }
             case DOWN -> { return DOWN; }
-            default -> { return null; }
+            default -> { throw new RuntimeException("dirToBooleanProperty did not recieve a valid direction somehow!"); }
         }
     }
 }

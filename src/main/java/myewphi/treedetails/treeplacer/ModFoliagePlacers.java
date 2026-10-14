@@ -1,6 +1,7 @@
 package myewphi.treedetails.treeplacer;
 
 import myewphi.treedetails.TreeDetails;
+import myewphi.treedetails.treeplacer.foliage.BranchedFoliagePlacer;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacerType;
 import net.neoforged.bus.api.IEventBus;

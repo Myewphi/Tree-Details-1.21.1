@@ -9,21 +9,30 @@ import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.LevelAccessor;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.Blocks;
+import net.minecraft.world.level.block.SimpleWaterloggedBlock;
 import net.minecraft.world.level.block.state.BlockState;
 import net.minecraft.world.level.block.state.StateDefinition;
+import net.minecraft.world.level.block.state.properties.BlockStateProperties;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
+import net.minecraft.world.level.material.FluidState;
+import net.minecraft.world.level.material.Fluids;
 import net.minecraft.world.phys.shapes.CollisionContext;
 import net.minecraft.world.phys.shapes.Shapes;
 import net.minecraft.world.phys.shapes.VoxelShape;
 import org.jetbrains.annotations.Nullable;
 
-public class BranchBlock extends Block {
+import java.util.List;
+
+public class BranchBlock extends Block implements SimpleWaterloggedBlock {
     public static final BooleanProperty NORTH = TreeDetails.NORTH;
     public static final BooleanProperty EAST = TreeDetails.EAST;
     public static final BooleanProperty SOUTH = TreeDetails.SOUTH;
     public static final BooleanProperty WEST = TreeDetails.WEST;
     public static final BooleanProperty UP = TreeDetails.UP;
     public static final BooleanProperty DOWN = TreeDetails.DOWN;
+    public static final BooleanProperty WATERLOGGED = BlockStateProperties.WATERLOGGED;
+    public static final BooleanProperty PERSISTENT = BlockStateProperties.PERSISTENT;
 
     public BranchBlock(Properties properties) {
         super(properties);
@@ -35,22 +44,32 @@ public class BranchBlock extends Block {
                 .setValue(WEST, Boolean.FALSE)
                 .setValue(UP, Boolean.FALSE)
                 .setValue(DOWN, Boolean.FALSE)
+                .setValue(WATERLOGGED, Boolean.FALSE)
+                .setValue(PERSISTENT, Boolean.TRUE)
         );
     }
     @Override
     protected void createBlockStateDefinition(StateDefinition.Builder<Block, BlockState> pBuilder) {
-        pBuilder.add(NORTH, EAST, SOUTH, WEST, UP, DOWN);
+        pBuilder.add(NORTH, EAST, SOUTH, WEST, UP, DOWN, WATERLOGGED, PERSISTENT);
     }
 
     @Override
+    public int getFlammability(BlockState state, BlockGetter level, BlockPos pos, Direction direction) {
+        return state.hasProperty(BlockStateProperties.WATERLOGGED) && state.getValue(BlockStateProperties.WATERLOGGED) ? 0 : 20;
+    }
+
+    // BLOCK STATE
+    @Override
     public @Nullable BlockState getStateForPlacement(BlockPlaceContext context) {
+        FluidState fluidstate = context.getLevel().getFluidState(context.getClickedPos());
         return defaultBlockState()
                 .setValue(NORTH, canConnect(context, Direction.NORTH))
                 .setValue(EAST, canConnect(context, Direction.EAST))
                 .setValue(SOUTH, canConnect(context, Direction.SOUTH))
                 .setValue(WEST, canConnect(context, Direction.WEST))
                 .setValue(UP, canConnect(context, Direction.UP))
-                .setValue(DOWN, canConnect(context, Direction.DOWN));
+                .setValue(DOWN, canConnect(context, Direction.DOWN))
+                .setValue(WATERLOGGED, fluidstate.getType() == Fluids.WATER);
     }
     boolean canConnect(BlockState state){
         return state.is(BlockTags.LOGS);
@@ -61,9 +80,65 @@ public class BranchBlock extends Block {
 
     @Override
     protected BlockState updateShape(BlockState state, Direction direction, BlockState neighborState, LevelAccessor level, BlockPos pos, BlockPos neighborPos) {
+        if (state.getValue(WATERLOGGED)) {
+            level.scheduleTick(pos, Fluids.WATER, Fluids.WATER.getTickDelay(level));
+        }
+
+        if(!state.getValue(PERSISTENT) && neighborState.isAir()){
+            if(level instanceof Level){
+                if(!isAttachedToTrunk((Level) level, pos)){
+                    return Blocks.AIR.defaultBlockState();
+                }
+            }
+        }
+
         return state.setValue(TreeDetails.dirToBooleanProperty(direction), canConnect(neighborState));
     }
+    protected boolean isAttachedToTrunk(Level level, BlockPos pos){
+        List<BlockPos> checkedPos = new java.util.ArrayList<>(List.of());
+        List<BlockPos> checkingPos = new java.util.ArrayList<>(List.of());
+        checkingPos.add(pos);
 
+        //check 16 blocks out
+        for(int i = 0; i < 16; i++){
+            List<BlockPos> willCheckPos = new java.util.ArrayList<>(List.of());
+
+            //loop through all blocks currently added to the checking list
+            for(BlockPos checking : checkingPos){
+                //check adjacent directions
+                for(Direction dir : Direction.values()){
+                    //if not log tagged then skip
+                    if(!level.getBlockState(checking.relative(dir)).is(BlockTags.LOGS)){
+                        continue;
+                    }
+                    //if not a branch then this is our trunk!
+                    if(!(level.getBlockState(checking.relative(dir)).getBlock() instanceof BranchBlock)){
+                        return true;
+                    }
+                    //if branch then add it to the checking list
+                    willCheckPos.add(checking.relative(dir));
+                }
+
+                //after looping through adjacent blocks, mark this spot as checked
+                checkedPos.add(checking);
+            }
+            for(BlockPos willCheck : willCheckPos){
+                checkingPos.add(willCheck);
+            }
+            //remove checked pos from checking list
+            for(BlockPos checked : checkedPos){
+                checkingPos.remove(checked);
+            }
+        }
+
+        return false;
+    }
+
+    protected FluidState getFluidState(BlockState state) {
+        return state.getValue(WATERLOGGED) ? Fluids.WATER.getSource(false) : super.getFluidState(state);
+    }
+
+    // VOXEL SHAPE
     private static final VoxelShape NORTH_BOX = Block.box(4, 4, 0, 12, 12, 4);
     private static final VoxelShape EAST_BOX = Block.box(12, 4, 4, 16, 12, 12);
     private static final VoxelShape SOUTH_BOX = Block.box(4, 4, 12, 12, 12, 16);
