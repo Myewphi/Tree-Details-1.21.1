@@ -8,11 +8,10 @@ import net.minecraft.core.Direction;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.network.chat.Component;
 import net.minecraft.world.item.CreativeModeTab;
-import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.state.properties.BooleanProperty;
-import net.neoforged.neoforge.common.NeoForge;
+import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.registries.DeferredHolder;
 import net.neoforged.neoforge.registries.DeferredRegister;
 import org.slf4j.Logger;
@@ -51,6 +50,14 @@ public class TreeDetails {
                 output.accept(ModBlocks.MOSSY_OAK_WOOD);
                 output.accept(ModBlocks.MOSSY_OAK_LOG);
                 output.accept(ModBlocks.MOSSY_OAK_BRANCH);
+
+                output.accept(Blocks.BIRCH_WOOD);
+                output.accept(Blocks.BIRCH_LOG);
+                output.accept(ModBlocks.BIRCH_BRANCH);
+
+                output.accept(ModBlocks.MOSSY_BIRCH_WOOD);
+                output.accept(ModBlocks.MOSSY_BIRCH_LOG);
+                output.accept(ModBlocks.MOSSY_BIRCH_BRANCH);
 
             }).build());
 

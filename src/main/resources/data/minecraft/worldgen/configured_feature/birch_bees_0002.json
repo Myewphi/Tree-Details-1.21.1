@@ -1,0 +1,151 @@
+{
+  "type": "minecraft:tree",
+  "config": {
+    "decorators": [
+      {
+        "type": "minecraft:beehive",
+        "probability": 0.002
+      }
+    ],
+    "dirt_provider": {
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "minecraft:rooted_dirt"
+      }
+    },
+    "foliage_placer": {
+      "type": "minecraft:blob_foliage_placer",
+      "offset": 0,
+      "radius": 2,
+      "height": 3
+    },
+    "foliage_provider": {
+      "type": "minecraft:weighted_state_provider",
+      "entries": [
+        {
+          "weight": 70,
+          "data": {
+            "Name": "minecraft:birch_leaves",
+            "Properties": {
+              "distance": "7",
+              "persistent": "false",
+              "waterlogged": "false"
+            }
+          }
+        },
+        {
+          "weight": 30,
+          "data": {
+            "Name": "minecraft:air",
+            "Properties": {
+              "distance": "7",
+              "persistent": "false",
+              "waterlogged": "false"
+            }
+          }
+        }
+      ]
+    },
+    "force_dirt": false,
+    "ignore_vines": true,
+    "minimum_size": {
+      "type": "minecraft:two_layers_feature_size",
+      "limit": 1,
+      "lower_size": 0,
+      "upper_size": 1
+    },
+    "trunk_placer": {
+      "type": "treedetails:birch_trunk_placer",
+      "base_height": 12,
+      "height_rand_a": 6,
+      "height_rand_b": 0,
+      "branch_block": {
+        "type": "minecraft:noise_threshold_provider",
+        "seed": 1,
+        "noise": {
+          "firstOctave": -1,
+          "amplitudes": [
+            1
+          ]
+        },
+        "scale": 1,
+        "threshold": -0.2,
+        "high_chance": 0,
+        "default_state": {
+          "Name": "treedetails:birch_branch",
+          "Properties": {
+            "persistent": "false"
+          }
+        },
+        "low_states": [
+          {
+            "Name": "treedetails:mossy_birch_branch",
+            "Properties": {
+              "persistent": "false"
+            }
+          }
+        ],
+        "high_states": [
+          {
+            "Name": "treedetails:birch_branch",
+            "Properties": {
+              "persistent": "false"
+            }
+          }
+        ]
+      },
+      "root_block": {
+        "type": "minecraft:noise_threshold_provider",
+        "seed": 1,
+        "noise": {
+          "firstOctave": -1,
+          "amplitudes": [
+            1
+          ]
+        },
+        "scale": 1,
+        "threshold": -0.2,
+        "high_chance": 0,
+        "default_state": {
+          "Name": "minecraft:birch_wood"
+        },
+        "low_states": [
+          {
+            "Name": "treedetails:mossy_birch_wood"
+          }
+        ],
+        "high_states": [
+          {
+            "Name": "minecraft:birch_wood"
+          }
+        ]
+      }
+    },
+    "trunk_provider": {
+      "type": "minecraft:noise_threshold_provider",
+      "seed": 1,
+      "noise": {
+        "firstOctave": -1,
+        "amplitudes": [
+          1
+        ]
+      },
+      "scale": 1,
+      "threshold": -0.2,
+      "high_chance": 0,
+      "default_state": {
+        "Name": "minecraft:birch_log"
+      },
+      "low_states": [
+        {
+          "Name": "treedetails:mossy_birch_log"
+        }
+      ],
+      "high_states": [
+        {
+          "Name": "minecraft:birch_log"
+        }
+      ]
+    }
+  }
+}

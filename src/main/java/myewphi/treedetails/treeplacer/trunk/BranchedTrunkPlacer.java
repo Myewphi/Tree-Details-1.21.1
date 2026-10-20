@@ -96,6 +96,7 @@ public class BranchedTrunkPlacer extends TrunkPlacer {
             currentBranchHeight = randomStep(random, currentBranchHeight, freeTreeHeight - 5, freeTreeHeight - 3);
         }
 
+        //place roots
         for(Direction dir : ImmutableList.of(Direction.NORTH, Direction.EAST, Direction.SOUTH, Direction.WEST)){
             if(random.nextInt(2) == 0){
                 placeRoots(level, random, pos, dir, blockSetter);

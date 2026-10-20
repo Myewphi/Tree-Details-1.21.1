@@ -5,7 +5,7 @@
     "features": [
       {
         "chance": 0.2,
-        "feature": "minecraft:oak_bees_0002"
+        "feature": "minecraft:birch_bees_0002"
       },
       {
         "chance": 0.1,

@@ -24,13 +24,25 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 //MOSSY OAK
                 .add(ModBlocks.MOSSY_OAK_WOOD.getKey())
                 .add(ModBlocks.MOSSY_OAK_LOG.getKey())
-                .add(ModBlocks.MOSSY_OAK_BRANCH.getKey());
+                .add(ModBlocks.MOSSY_OAK_BRANCH.getKey())
+                //BIRCH
+                .add(ModBlocks.BIRCH_BRANCH.getKey())
+                //MOSSY BIRCH
+                .add(ModBlocks.MOSSY_BIRCH_WOOD.getKey())
+                .add(ModBlocks.MOSSY_BIRCH_LOG.getKey())
+                .add(ModBlocks.MOSSY_BIRCH_BRANCH.getKey());
         this.tag(BlockTags.LOGS)
                 //OAK
                 .add(ModBlocks.OAK_BRANCH.getKey())
                 //MOSSY OAK
                 .add(ModBlocks.MOSSY_OAK_WOOD.getKey())
                 .add(ModBlocks.MOSSY_OAK_LOG.getKey())
-                .add(ModBlocks.MOSSY_OAK_BRANCH.getKey());
+                .add(ModBlocks.MOSSY_OAK_BRANCH.getKey())
+                //BIRCH
+                .add(ModBlocks.BIRCH_BRANCH.getKey())
+                //MOSSY BIRCH
+                .add(ModBlocks.MOSSY_BIRCH_WOOD.getKey())
+                .add(ModBlocks.MOSSY_BIRCH_LOG.getKey())
+                .add(ModBlocks.MOSSY_BIRCH_BRANCH.getKey());
     }
 }

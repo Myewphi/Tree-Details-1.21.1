@@ -1,0 +1,7 @@
+{
+  "parent": "treedetails:block/branch_center",
+  "textures": {
+    "0": "treedetails:block/mossy_birch_log",
+    "particle": "treedetails:block/mossy_birch_log"
+  }
+}

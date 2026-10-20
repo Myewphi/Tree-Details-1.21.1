@@ -3,6 +3,10 @@
     "treedetails:oak_branch",
     "treedetails:mossy_oak_wood",
     "treedetails:mossy_oak_log",
-    "treedetails:mossy_oak_branch"
+    "treedetails:mossy_oak_branch",
+    "treedetails:birch_branch",
+    "treedetails:mossy_birch_wood",
+    "treedetails:mossy_birch_log",
+    "treedetails:mossy_birch_branch"
   ]
 }

@@ -1,0 +1,7 @@
+{
+  "parent": "minecraft:block/cube_column",
+  "textures": {
+    "end": "treedetails:block/mossy_birch_log",
+    "side": "treedetails:block/mossy_birch_log"
+  }
+}

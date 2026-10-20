@@ -28,6 +28,16 @@ public class ModBlocks {
             () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_LOG).ignitedByLava()));
     public static final DeferredBlock<Block> MOSSY_OAK_BRANCH = registerBlock("mossy_oak_branch",
             () -> new BranchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.OAK_PLANKS).ignitedByLava()));
+    //BIRCH
+    public static final DeferredBlock<Block> BIRCH_BRANCH = registerBlock("birch_branch",
+            () -> new BranchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_PLANKS).ignitedByLava()));
+    //MOSSY BIRCH
+    public static final DeferredBlock<RotatedPillarBlock> MOSSY_BIRCH_WOOD= registerBlock("mossy_birch_wood",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_WOOD).ignitedByLava()));
+    public static final DeferredBlock<RotatedPillarBlock> MOSSY_BIRCH_LOG = registerBlock("mossy_birch_log",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_LOG).ignitedByLava()));
+    public static final DeferredBlock<Block> MOSSY_BIRCH_BRANCH = registerBlock("mossy_birch_branch",
+            () -> new BranchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.BIRCH_PLANKS).ignitedByLava()));
 
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);

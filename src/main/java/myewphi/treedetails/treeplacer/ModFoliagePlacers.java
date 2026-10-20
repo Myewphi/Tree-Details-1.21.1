@@ -1,6 +1,7 @@
 package myewphi.treedetails.treeplacer;
 
 import myewphi.treedetails.TreeDetails;
+import myewphi.treedetails.treeplacer.foliage.BirchFoliagePlacer;
 import myewphi.treedetails.treeplacer.foliage.BranchedFoliagePlacer;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacerType;
@@ -14,6 +15,8 @@ public class ModFoliagePlacers {
 
     public static final DeferredHolder<FoliagePlacerType<?>, FoliagePlacerType<BranchedFoliagePlacer>> BRANCHED_FOLIAGE_PLACER =
             FOLIAGE_PLACER_TYPES.register("branched_foliage_placer", () -> new FoliagePlacerType<>(BranchedFoliagePlacer.CODEC));
+    public static final DeferredHolder<FoliagePlacerType<?>, FoliagePlacerType<BirchFoliagePlacer>> BIRCH_FOLIAGE_PLACER =
+            FOLIAGE_PLACER_TYPES.register("birch_foliage_placer", () -> new FoliagePlacerType<>(BirchFoliagePlacer.CODEC));
 
     public static void register(IEventBus eventBus){
         FOLIAGE_PLACER_TYPES.register(eventBus);

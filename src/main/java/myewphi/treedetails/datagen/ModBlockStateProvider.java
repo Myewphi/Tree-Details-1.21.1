@@ -28,6 +28,11 @@ public class ModBlockStateProvider extends BlockStateProvider {
         //MOSSY OAK
         logBlockWithItem(ModBlocks.MOSSY_OAK_WOOD.get(), ModBlocks.MOSSY_OAK_LOG.get());
         branchBlockWithItem(ModBlocks.MOSSY_OAK_BRANCH.get(), ModBlocks.MOSSY_OAK_LOG.get());
+        //BIRCH
+        branchBlockWithItem(ModBlocks.BIRCH_BRANCH.get(), Blocks.BIRCH_LOG);
+        //MOSSY BIRCH
+        logBlockWithItem(ModBlocks.MOSSY_BIRCH_WOOD.get(), ModBlocks.MOSSY_BIRCH_LOG.get());
+        branchBlockWithItem(ModBlocks.MOSSY_BIRCH_BRANCH.get(), ModBlocks.MOSSY_BIRCH_LOG.get());
     }
 
     private void blockWithItem(DeferredBlock<?> deferredBlock){
