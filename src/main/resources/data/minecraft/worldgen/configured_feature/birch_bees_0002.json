@@ -14,37 +14,20 @@
       }
     },
     "foliage_placer": {
-      "type": "minecraft:blob_foliage_placer",
+      "type": "treedetails:birch_foliage_placer",
       "offset": 0,
-      "radius": 2,
-      "height": 3
+      "radius": 2
     },
     "foliage_provider": {
-      "type": "minecraft:weighted_state_provider",
-      "entries": [
-        {
-          "weight": 70,
-          "data": {
-            "Name": "minecraft:birch_leaves",
-            "Properties": {
-              "distance": "7",
-              "persistent": "false",
-              "waterlogged": "false"
-            }
-          }
-        },
-        {
-          "weight": 30,
-          "data": {
-            "Name": "minecraft:air",
-            "Properties": {
-              "distance": "7",
-              "persistent": "false",
-              "waterlogged": "false"
-            }
-          }
+      "type": "minecraft:simple_state_provider",
+      "state": {
+        "Name": "minecraft:birch_leaves",
+        "Properties": {
+          "distance": "7",
+          "persistent": "false",
+          "waterlogged": "false"
         }
-      ]
+      }
     },
     "force_dirt": false,
     "ignore_vines": true,

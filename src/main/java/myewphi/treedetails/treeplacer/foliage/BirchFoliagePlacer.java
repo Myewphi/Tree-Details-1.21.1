@@ -12,14 +12,10 @@ import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacerTy
 
 public class BirchFoliagePlacer extends FoliagePlacer {
     public static final MapCodec<BirchFoliagePlacer> CODEC = RecordCodecBuilder.mapCodec((instance) -> foliagePlacerParts(instance)
-            .and(IntProvider.codec(1, 32).fieldOf("foliage_width").forGetter(placer -> placer.foliageWidth))
             .apply(instance, BirchFoliagePlacer::new));
 
-    private final IntProvider foliageWidth;
-
-    public BirchFoliagePlacer(IntProvider radius, IntProvider offset, IntProvider foliageWidth) {
+    public BirchFoliagePlacer(IntProvider radius, IntProvider offset) {
         super(radius, offset);
-        this.foliageWidth = foliageWidth;
     }
 
     @Override
@@ -38,16 +34,20 @@ public class BirchFoliagePlacer extends FoliagePlacer {
             int height,
             int radius,
             int offset) {
-        int width = foliageWidth.sample(randomSource) + offset;
 
-        for(int i = 0; i < radius; i++){
-            placeLeavesRow(level, setter, randomSource, config, attachment.pos().below(i), width, 0, attachment.doubleTrunk());
+        tryPlaceLeaf(level, setter, randomSource, config, attachment.pos());
+        tryPlaceLeaf(level, setter, randomSource, config, attachment.pos().north());
+        tryPlaceLeaf(level, setter, randomSource, config, attachment.pos().east());
+        tryPlaceLeaf(level, setter, randomSource, config, attachment.pos().south());
+        tryPlaceLeaf(level, setter, randomSource, config, attachment.pos().west());
+        for(int i = 1; i < height; i++){
+            placeLeavesRow(level, setter, randomSource, config, attachment.pos().below(i), radius, 0, attachment.doubleTrunk());
         }
     }
 
     @Override
     public int foliageHeight(RandomSource randomSource, int i, TreeConfiguration treeConfiguration) {
-        return 0;
+        return 3;
     }
 
     @Override
@@ -56,6 +56,6 @@ public class BirchFoliagePlacer extends FoliagePlacer {
             //rounds the corners
             return true;
         }
-        return random.nextInt(10) < 6;
+        return random.nextInt(4) == 0;
     }
 }
