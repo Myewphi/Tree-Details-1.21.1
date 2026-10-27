@@ -3,6 +3,7 @@ package myewphi.treedetails.treeplacer;
 import myewphi.treedetails.TreeDetails;
 import myewphi.treedetails.treeplacer.trunk.BirchTrunkPlacer;
 import myewphi.treedetails.treeplacer.trunk.OakTrunkPlacer;
+import myewphi.treedetails.treeplacer.trunk.SpruceTrunkPlacer;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.levelgen.feature.trunkplacers.TrunkPlacerType;
 import net.neoforged.bus.api.IEventBus;
@@ -17,6 +18,8 @@ public class ModTrunkPlacers {
             TRUNK_PLACER_TYPES.register("oak_trunk_placer", () -> new TrunkPlacerType<>(OakTrunkPlacer.CODEC));
     public static final DeferredHolder<TrunkPlacerType<?>, TrunkPlacerType<BirchTrunkPlacer>> BIRCH_TRUNK_PLACER =
             TRUNK_PLACER_TYPES.register("birch_trunk_placer", () -> new TrunkPlacerType<>(BirchTrunkPlacer.CODEC));
+    public static final DeferredHolder<TrunkPlacerType<?>, TrunkPlacerType<SpruceTrunkPlacer>> SPRUCE_TRUNK_PLACER =
+            TRUNK_PLACER_TYPES.register("spruce_trunk_placer", () -> new TrunkPlacerType<>(SpruceTrunkPlacer.CODEC));
 
     public static void register(IEventBus eventBus){
         TRUNK_PLACER_TYPES.register(eventBus);

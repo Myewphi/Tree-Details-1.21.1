@@ -59,6 +59,14 @@ public class TreeDetails {
                 output.accept(ModBlocks.MOSSY_BIRCH_LOG);
                 output.accept(ModBlocks.MOSSY_BIRCH_BRANCH);
 
+                output.accept(Blocks.SPRUCE_WOOD);
+                output.accept(Blocks.SPRUCE_LOG);
+                output.accept(ModBlocks.SPRUCE_BRANCH);
+
+                output.accept(ModBlocks.MOSSY_SPRUCE_WOOD);
+                output.accept(ModBlocks.MOSSY_SPRUCE_LOG);
+                output.accept(ModBlocks.MOSSY_SPRUCE_BRANCH);
+
             }).build());
 
     //Util

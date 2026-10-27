@@ -30,7 +30,13 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 //MOSSY BIRCH
                 .add(ModBlocks.MOSSY_BIRCH_WOOD.getKey())
                 .add(ModBlocks.MOSSY_BIRCH_LOG.getKey())
-                .add(ModBlocks.MOSSY_BIRCH_BRANCH.getKey());
+                .add(ModBlocks.MOSSY_BIRCH_BRANCH.getKey())
+                //SPRUCE
+                .add(ModBlocks.SPRUCE_BRANCH.getKey())
+                //MOSSY SPRUCE
+                .add(ModBlocks.MOSSY_SPRUCE_WOOD.getKey())
+                .add(ModBlocks.MOSSY_SPRUCE_LOG.getKey())
+                .add(ModBlocks.MOSSY_SPRUCE_BRANCH.getKey());
         this.tag(BlockTags.LOGS)
                 //OAK
                 .add(ModBlocks.OAK_BRANCH.getKey())
@@ -43,6 +49,12 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 //MOSSY BIRCH
                 .add(ModBlocks.MOSSY_BIRCH_WOOD.getKey())
                 .add(ModBlocks.MOSSY_BIRCH_LOG.getKey())
-                .add(ModBlocks.MOSSY_BIRCH_BRANCH.getKey());
+                .add(ModBlocks.MOSSY_BIRCH_BRANCH.getKey())
+                //SPRUCE
+                .add(ModBlocks.SPRUCE_BRANCH.getKey())
+                //MOSSY SPRUCE
+                .add(ModBlocks.MOSSY_SPRUCE_WOOD.getKey())
+                .add(ModBlocks.MOSSY_SPRUCE_LOG.getKey())
+                .add(ModBlocks.MOSSY_SPRUCE_BRANCH.getKey());
     }
 }

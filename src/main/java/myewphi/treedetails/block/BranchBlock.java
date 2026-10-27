@@ -3,7 +3,9 @@ package myewphi.treedetails.block;
 import myewphi.treedetails.TreeDetails;
 import net.minecraft.core.BlockPos;
 import net.minecraft.core.Direction;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.tags.BlockTags;
+import net.minecraft.util.RandomSource;
 import net.minecraft.world.item.context.BlockPlaceContext;
 import net.minecraft.world.level.BlockGetter;
 import net.minecraft.world.level.Level;
@@ -86,21 +88,28 @@ public class BranchBlock extends Block implements SimpleWaterloggedBlock {
 
         if(!state.getValue(PERSISTENT) && neighborState.isAir()){
             if(level instanceof Level){
-                if(!isAttachedToTrunk((Level) level, pos)){
-                    return Blocks.AIR.defaultBlockState();
-                }
+                level.scheduleTick(pos, this, 1);
             }
         }
 
         return state.setValue(TreeDetails.dirToBooleanProperty(direction), canConnect(neighborState));
     }
+
+    @Override
+    protected void tick(BlockState state, ServerLevel level, BlockPos pos, RandomSource random) {
+        if(!isAttachedToTrunk(level, pos)){
+            dropResources(state, level, pos);
+            level.removeBlock(pos, false);
+        }
+    }
+
     protected boolean isAttachedToTrunk(Level level, BlockPos pos){
         List<BlockPos> checkedPos = new java.util.ArrayList<>(List.of());
         List<BlockPos> checkingPos = new java.util.ArrayList<>(List.of());
         checkingPos.add(pos);
 
-        //check 16 blocks out
-        for(int i = 0; i < 16; i++){
+        //use for loop to limit number of blocked check outwards
+        for(int i = 0; i < 10; i++){
             List<BlockPos> willCheckPos = new java.util.ArrayList<>(List.of());
 
             //loop through all blocks currently added to the checking list

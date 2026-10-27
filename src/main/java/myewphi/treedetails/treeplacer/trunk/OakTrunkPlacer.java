@@ -162,6 +162,20 @@ public class OakTrunkPlacer extends TrunkPlacer {
                             .setValue(TreeDetails.dirToBooleanProperty(dirTwo), true));
         }
     }
+    protected int randomStep(RandomSource random, int current, int min, int max){
+        if(current == max){
+            return current - 1;
+        }
+        if(current == min){
+            return current + 1;
+        }
+
+        if(random.nextIntBetweenInclusive(1, 2) == 1){
+            return current + 1;
+        }
+        return current - 1;
+    }
+
     protected void placeRoots(LevelSimulatedReader level, RandomSource random, BlockPos pos, Direction dir, BiConsumer<BlockPos, BlockState> blockSetter){
         BlockPos currentPos = pos.below(random.nextInt(2)).relative(dir);
         Direction currentDir = dir;
@@ -225,7 +239,6 @@ public class OakTrunkPlacer extends TrunkPlacer {
                             .setValue(TreeDetails.dirToBooleanProperty(Direction.DOWN), true));
         }
     }
-
     protected Optional<Direction> getNearbySlopes(LevelSimulatedReader level, RandomSource random, BlockPos pos){
         List<Direction> list = new java.util.ArrayList<>(List.of());
         for(Direction dir : List.of(Direction.NORTH, Direction.EAST, Direction.SOUTH, Direction.WEST)){
@@ -247,18 +260,5 @@ public class OakTrunkPlacer extends TrunkPlacer {
                 }
             }
         }
-    }
-    protected int randomStep(RandomSource random, int current, int min, int max){
-        if(current == max){
-            return current - 1;
-        }
-        if(current == min){
-            return current + 1;
-        }
-
-        if(random.nextIntBetweenInclusive(1, 2) == 1){
-            return current + 1;
-        }
-        return current - 1;
     }
 }

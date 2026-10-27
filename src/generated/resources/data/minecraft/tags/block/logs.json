@@ -7,6 +7,10 @@
     "treedetails:birch_branch",
     "treedetails:mossy_birch_wood",
     "treedetails:mossy_birch_log",
-    "treedetails:mossy_birch_branch"
+    "treedetails:mossy_birch_branch",
+    "treedetails:spruce_branch",
+    "treedetails:mossy_spruce_wood",
+    "treedetails:mossy_spruce_log",
+    "treedetails:mossy_spruce_branch"
   ]
 }

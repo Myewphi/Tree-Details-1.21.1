@@ -34,6 +34,12 @@ public class ModBlockLootTableProvider extends BlockLootSubProvider {
         dropSelf(ModBlocks.MOSSY_BIRCH_WOOD.get());
         dropSelf(ModBlocks.MOSSY_BIRCH_LOG.get());
         dropSelf(ModBlocks.MOSSY_BIRCH_BRANCH.get());
+        //SPRUCE
+        dropSelf(ModBlocks.SPRUCE_BRANCH.get());
+        //MOSSY SPRUCE
+        dropSelf(ModBlocks.MOSSY_SPRUCE_WOOD.get());
+        dropSelf(ModBlocks.MOSSY_SPRUCE_LOG.get());
+        dropSelf(ModBlocks.MOSSY_SPRUCE_BRANCH.get());
     }
 
     @Override
