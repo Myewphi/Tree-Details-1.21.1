@@ -2,7 +2,7 @@ package myewphi.treedetails.treeplacer;
 
 import myewphi.treedetails.TreeDetails;
 import myewphi.treedetails.treeplacer.foliage.BirchFoliagePlacer;
-import myewphi.treedetails.treeplacer.foliage.BranchedFoliagePlacer;
+import myewphi.treedetails.treeplacer.foliage.OakFoliagePlacer;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacerType;
 import net.neoforged.bus.api.IEventBus;
@@ -13,8 +13,8 @@ public class ModFoliagePlacers {
     public static final DeferredRegister<FoliagePlacerType<?>> FOLIAGE_PLACER_TYPES =
             DeferredRegister.create(Registries.FOLIAGE_PLACER_TYPE, TreeDetails.MOD_ID);
 
-    public static final DeferredHolder<FoliagePlacerType<?>, FoliagePlacerType<BranchedFoliagePlacer>> BRANCHED_FOLIAGE_PLACER =
-            FOLIAGE_PLACER_TYPES.register("branched_foliage_placer", () -> new FoliagePlacerType<>(BranchedFoliagePlacer.CODEC));
+    public static final DeferredHolder<FoliagePlacerType<?>, FoliagePlacerType<OakFoliagePlacer>> OAK_FOLIAGE_PLACER =
+            FOLIAGE_PLACER_TYPES.register("oak_foliage_placer", () -> new FoliagePlacerType<>(OakFoliagePlacer.CODEC));
     public static final DeferredHolder<FoliagePlacerType<?>, FoliagePlacerType<BirchFoliagePlacer>> BIRCH_FOLIAGE_PLACER =
             FOLIAGE_PLACER_TYPES.register("birch_foliage_placer", () -> new FoliagePlacerType<>(BirchFoliagePlacer.CODEC));
 

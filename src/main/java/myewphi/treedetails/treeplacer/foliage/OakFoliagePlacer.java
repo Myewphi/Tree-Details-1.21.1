@@ -15,16 +15,16 @@ import net.minecraft.world.level.levelgen.feature.foliageplacers.FoliagePlacerTy
 
 import java.util.function.Predicate;
 
-public class BranchedFoliagePlacer extends FoliagePlacer {
-    public static final MapCodec<BranchedFoliagePlacer> CODEC = RecordCodecBuilder.mapCodec((instance) -> foliagePlacerParts(instance).apply(instance, BranchedFoliagePlacer::new));
+public class OakFoliagePlacer extends FoliagePlacer {
+    public static final MapCodec<OakFoliagePlacer> CODEC = RecordCodecBuilder.mapCodec((instance) -> foliagePlacerParts(instance).apply(instance, OakFoliagePlacer::new));
 
-    public BranchedFoliagePlacer(IntProvider radius, IntProvider offset) {
+    public OakFoliagePlacer(IntProvider radius, IntProvider offset) {
         super(radius, offset);
     }
 
     @Override
     protected FoliagePlacerType<?> type() {
-        return ModFoliagePlacers.BRANCHED_FOLIAGE_PLACER.get();
+        return ModFoliagePlacers.OAK_FOLIAGE_PLACER.get();
     }
 
     @Override

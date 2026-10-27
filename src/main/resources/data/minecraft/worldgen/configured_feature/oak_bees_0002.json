@@ -14,7 +14,7 @@
       }
     },
     "foliage_placer": {
-      "type": "treedetails:branched_foliage_placer",
+      "type": "treedetails:oak_foliage_placer",
       "offset": 0,
       "radius": 2
     },
@@ -38,7 +38,7 @@
       "upper_size": 1
     },
     "trunk_placer": {
-      "type": "treedetails:branched_trunk_placer",
+      "type": "treedetails:oak_trunk_placer",
       "base_height": 7,
       "height_rand_a": 6,
       "height_rand_b": 0,

@@ -22,17 +22,17 @@ import java.util.List;
 import java.util.Optional;
 import java.util.function.BiConsumer;
 
-public class BranchedTrunkPlacer extends TrunkPlacer {
-    public static final MapCodec<BranchedTrunkPlacer> CODEC = RecordCodecBuilder.mapCodec(
+public class OakTrunkPlacer extends TrunkPlacer {
+    public static final MapCodec<OakTrunkPlacer> CODEC = RecordCodecBuilder.mapCodec(
             instance -> trunkPlacerParts(instance)
                     .and(BlockStateProvider.CODEC.fieldOf("branch_block").forGetter(placer -> placer.branchBlock))
                     .and(BlockStateProvider.CODEC.fieldOf("root_block").forGetter(placer -> placer.rootBlock))
-                    .apply(instance, BranchedTrunkPlacer::new)
+                    .apply(instance, OakTrunkPlacer::new)
     );
     private final BlockStateProvider branchBlock;
     private final BlockStateProvider rootBlock;
 
-    public BranchedTrunkPlacer(int baseHeight, int heightRandA, int heightRandB, BlockStateProvider branchBlock, BlockStateProvider rootBlock) {
+    public OakTrunkPlacer(int baseHeight, int heightRandA, int heightRandB, BlockStateProvider branchBlock, BlockStateProvider rootBlock) {
         super(baseHeight, heightRandA, heightRandB);
         this.branchBlock = branchBlock;
         this.rootBlock = rootBlock;
@@ -40,7 +40,7 @@ public class BranchedTrunkPlacer extends TrunkPlacer {
 
     @Override
     protected TrunkPlacerType<?> type() {
-        return ModTrunkPlacers.BRANCHED_TRUNK_PLACER.get();
+        return ModTrunkPlacers.OAK_TRUNK_PLACER.get();
     }
 
     @Override
