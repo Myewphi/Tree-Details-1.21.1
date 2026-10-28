@@ -1,7 +1,82 @@
 {
   "type": "minecraft:tree",
   "config": {
-    "decorators": [],
+    "decorators": [
+      {
+        "type": "treedetails:roots_decorator",
+        "roots_length": {
+          "type": "minecraft:uniform",
+          "min_inclusive": 1,
+          "max_inclusive": 3
+        },
+        "roots_count": {
+          "type": "minecraft:uniform",
+          "min_inclusive": 0,
+          "max_inclusive": 2
+        },
+        "branch_block": {
+          "type": "minecraft:noise_threshold_provider",
+          "seed": 1,
+          "noise": {
+            "firstOctave": -1,
+            "amplitudes": [
+              1
+            ]
+          },
+          "scale": 1,
+          "threshold": -0.2,
+          "high_chance": 0,
+          "default_state": {
+            "Name": "treedetails:birch_branch",
+            "Properties": {
+              "persistent": "false"
+            }
+          },
+          "low_states": [
+            {
+              "Name": "treedetails:mossy_birch_branch",
+              "Properties": {
+                "persistent": "false"
+              }
+            }
+          ],
+          "high_states": [
+            {
+              "Name": "treedetails:birch_branch",
+              "Properties": {
+                "persistent": "false"
+              }
+            }
+          ]
+        },
+        "root_block": {
+          "type": "minecraft:noise_threshold_provider",
+          "seed": 1,
+          "noise": {
+            "firstOctave": -1,
+            "amplitudes": [
+              1
+            ]
+          },
+          "scale": 1,
+          "threshold": -0.2,
+          "high_chance": 0,
+          "default_state": {
+            "Name": "minecraft:birch_wood"
+          },
+          "low_states": [
+            {
+              "Name": "treedetails:mossy_birch_wood"
+            }
+          ],
+          "high_states": [
+            {
+              "Name": "minecraft:birch_wood"
+            }
+          ]
+        }
+      }
+    ],
     "dirt_provider": {
       "type": "minecraft:simple_state_provider",
       "state": {
@@ -69,32 +144,6 @@
             "Properties": {
               "persistent": "false"
             }
-          }
-        ]
-      },
-      "root_block": {
-        "type": "minecraft:noise_threshold_provider",
-        "seed": 1,
-        "noise": {
-          "firstOctave": -1,
-          "amplitudes": [
-            1
-          ]
-        },
-        "scale": 1,
-        "threshold": -0.2,
-        "high_chance": 0,
-        "default_state": {
-          "Name": "minecraft:birch_wood"
-        },
-        "low_states": [
-          {
-            "Name": "treedetails:mossy_birch_wood"
-          }
-        ],
-        "high_states": [
-          {
-            "Name": "minecraft:birch_wood"
           }
         ]
       }

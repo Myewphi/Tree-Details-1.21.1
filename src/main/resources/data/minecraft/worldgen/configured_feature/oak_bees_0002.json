@@ -3,8 +3,78 @@
   "config": {
     "decorators": [
       {
-        "type": "minecraft:beehive",
-        "probability": 0.002
+        "type": "treedetails:roots_decorator",
+        "roots_length": {
+          "type": "minecraft:uniform",
+          "min_inclusive": 2,
+          "max_inclusive": 8
+        },
+        "roots_count": {
+          "type": "minecraft:uniform",
+          "min_inclusive": 1,
+          "max_inclusive": 4
+        },
+        "branch_block": {
+          "type": "minecraft:noise_threshold_provider",
+          "seed": 1,
+          "noise": {
+            "firstOctave": -1,
+            "amplitudes": [
+              1
+            ]
+          },
+          "scale": 1,
+          "threshold": -0.2,
+          "high_chance": 0,
+          "default_state": {
+            "Name": "treedetails:oak_branch",
+            "Properties": {
+              "persistent": "false"
+            }
+          },
+          "low_states": [
+            {
+              "Name": "treedetails:mossy_oak_branch",
+              "Properties": {
+                "persistent": "false"
+              }
+            }
+          ],
+          "high_states": [
+            {
+              "Name": "treedetails:oak_branch",
+              "Properties": {
+                "persistent": "false"
+              }
+            }
+          ]
+        },
+        "root_block": {
+          "type": "minecraft:noise_threshold_provider",
+          "seed": 1,
+          "noise": {
+            "firstOctave": -1,
+            "amplitudes": [
+              1
+            ]
+          },
+          "scale": 1,
+          "threshold": -0.2,
+          "high_chance": 0,
+          "default_state": {
+            "Name": "minecraft:oak_wood"
+          },
+          "low_states": [
+            {
+              "Name": "treedetails:mossy_oak_wood"
+            }
+          ],
+          "high_states": [
+            {
+              "Name": "minecraft:oak_wood"
+            }
+          ]
+        }
       }
     ],
     "dirt_provider": {
@@ -74,32 +144,6 @@
             "Properties": {
               "persistent": "false"
             }
-          }
-        ]
-      },
-      "root_block": {
-        "type": "minecraft:noise_threshold_provider",
-        "seed": 1,
-        "noise": {
-          "firstOctave": -1,
-          "amplitudes": [
-            1
-          ]
-        },
-        "scale": 1,
-        "threshold": -0.2,
-        "high_chance": 0,
-        "default_state": {
-          "Name": "minecraft:oak_wood"
-        },
-        "low_states": [
-          {
-            "Name": "treedetails:mossy_oak_wood"
-          }
-        ],
-        "high_states": [
-          {
-            "Name": "minecraft:oak_wood"
           }
         ]
       }

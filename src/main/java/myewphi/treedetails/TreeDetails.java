@@ -3,6 +3,7 @@ package myewphi.treedetails;
 import myewphi.treedetails.block.ModBlocks;
 import myewphi.treedetails.item.ModItems;
 import myewphi.treedetails.treeplacer.ModFoliagePlacers;
+import myewphi.treedetails.treeplacer.ModTreeDecorators;
 import myewphi.treedetails.treeplacer.ModTrunkPlacers;
 import net.minecraft.core.Direction;
 import net.minecraft.core.registries.Registries;
@@ -32,6 +33,7 @@ public class TreeDetails {
         ModItems.register(modEventBus);
         ModTrunkPlacers.register(modEventBus);
         ModFoliagePlacers.register(modEventBus);
+        ModTreeDecorators.register(modEventBus);
         CREATIVE_MODE_TABS.register(modEventBus);
     }
 
