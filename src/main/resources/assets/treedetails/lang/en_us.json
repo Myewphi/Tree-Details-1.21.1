@@ -2,8 +2,42 @@
   "itemGroup.tab": "Tree Details",
 
   "block.treedetails.oak_branch": "Oak Branch",
-
   "block.treedetails.mossy_oak_wood": "Mossy Oak Wood",
   "block.treedetails.mossy_oak_log": "Mossy Oak Log",
-  "block.treedetails.mossy_oak_branch": "Mossy Oak Branch"
+  "block.treedetails.mossy_oak_branch": "Mossy Oak Branch",
+
+  "block.treedetails.birch_branch": "Birch Branch",
+  "block.treedetails.mossy_birch_wood": "Mossy Birch Wood",
+  "block.treedetails.mossy_birch_log": "Mossy Birch Log",
+  "block.treedetails.mossy_birch_branch": "Mossy Birch Branch",
+
+  "block.treedetails.spruce_branch": "Spruce Branch",
+  "block.treedetails.mossy_spruce_wood": "Mossy Spruce Wood",
+  "block.treedetails.mossy_spruce_log": "Mossy Spruce Log",
+  "block.treedetails.mossy_spruce_branch": "Mossy Spruce Branch",
+
+  "block.treedetails.jungle_branch": "Jungle Branch",
+  "block.treedetails.mossy_jungle_wood": "Mossy Jungle Wood",
+  "block.treedetails.mossy_jungle_log": "Mossy Jungle Log",
+  "block.treedetails.mossy_jungle_branch": "Mossy Jungle Branch",
+
+  "block.treedetails.acacia_branch": "Acacia Branch",
+  "block.treedetails.mossy_acacia_wood": "Mossy Acacia Wood",
+  "block.treedetails.mossy_acacia_log": "Mossy Acacia Log",
+  "block.treedetails.mossy_acacia_branch": "Mossy Acacia Branch",
+
+  "block.treedetails.dark_oak_branch": "Dark_Oak Branch",
+  "block.treedetails.mossy_dark_oak_wood": "Mossy Dark_Oak Wood",
+  "block.treedetails.mossy_dark_oak_log": "Mossy Dark_Oak Log",
+  "block.treedetails.mossy_dark_oak_branch": "Mossy Dark_Oak Branch",
+
+  "block.treedetails.cherry_branch": "Cherry Branch",
+  "block.treedetails.mossy_cherry_wood": "Mossy Cherry Wood",
+  "block.treedetails.mossy_cherry_log": "Mossy Cherry Log",
+  "block.treedetails.mossy_cherry_branch": "Mossy Cherry Branch",
+
+  "block.treedetails.mangrove_branch": "Mangrove Branch",
+  "block.treedetails.mossy_mangrove_wood": "Mossy Mangrove Wood",
+  "block.treedetails.mossy_mangrove_log": "Mossy Mangrove Log",
+  "block.treedetails.mossy_mangrove_branch": "Mossy Mangrove Branch"
 }

@@ -48,7 +48,6 @@ public class TreeDetails {
                 output.accept(Blocks.OAK_WOOD);
                 output.accept(Blocks.OAK_LOG);
                 output.accept(ModBlocks.OAK_BRANCH);
-
                 output.accept(ModBlocks.MOSSY_OAK_WOOD);
                 output.accept(ModBlocks.MOSSY_OAK_LOG);
                 output.accept(ModBlocks.MOSSY_OAK_BRANCH);
@@ -56,7 +55,6 @@ public class TreeDetails {
                 output.accept(Blocks.BIRCH_WOOD);
                 output.accept(Blocks.BIRCH_LOG);
                 output.accept(ModBlocks.BIRCH_BRANCH);
-
                 output.accept(ModBlocks.MOSSY_BIRCH_WOOD);
                 output.accept(ModBlocks.MOSSY_BIRCH_LOG);
                 output.accept(ModBlocks.MOSSY_BIRCH_BRANCH);
@@ -64,11 +62,44 @@ public class TreeDetails {
                 output.accept(Blocks.SPRUCE_WOOD);
                 output.accept(Blocks.SPRUCE_LOG);
                 output.accept(ModBlocks.SPRUCE_BRANCH);
-
                 output.accept(ModBlocks.MOSSY_SPRUCE_WOOD);
                 output.accept(ModBlocks.MOSSY_SPRUCE_LOG);
                 output.accept(ModBlocks.MOSSY_SPRUCE_BRANCH);
 
+                output.accept(Blocks.JUNGLE_WOOD);
+                output.accept(Blocks.JUNGLE_LOG);
+                output.accept(ModBlocks.JUNGLE_BRANCH);
+                output.accept(ModBlocks.MOSSY_JUNGLE_WOOD);
+                output.accept(ModBlocks.MOSSY_JUNGLE_LOG);
+                output.accept(ModBlocks.MOSSY_JUNGLE_BRANCH);
+
+                output.accept(Blocks.ACACIA_WOOD);
+                output.accept(Blocks.ACACIA_LOG);
+                output.accept(ModBlocks.ACACIA_BRANCH);
+                output.accept(ModBlocks.MOSSY_ACACIA_WOOD);
+                output.accept(ModBlocks.MOSSY_ACACIA_LOG);
+                output.accept(ModBlocks.MOSSY_ACACIA_BRANCH);
+
+                output.accept(Blocks.DARK_OAK_WOOD);
+                output.accept(Blocks.DARK_OAK_LOG);
+                output.accept(ModBlocks.DARK_OAK_BRANCH);
+                output.accept(ModBlocks.MOSSY_DARK_OAK_WOOD);
+                output.accept(ModBlocks.MOSSY_DARK_OAK_LOG);
+                output.accept(ModBlocks.MOSSY_DARK_OAK_BRANCH);
+
+                output.accept(Blocks.CHERRY_WOOD);
+                output.accept(Blocks.CHERRY_LOG);
+                output.accept(ModBlocks.CHERRY_BRANCH);
+                output.accept(ModBlocks.MOSSY_CHERRY_WOOD);
+                output.accept(ModBlocks.MOSSY_CHERRY_LOG);
+                output.accept(ModBlocks.MOSSY_CHERRY_BRANCH);
+
+                output.accept(Blocks.MANGROVE_WOOD);
+                output.accept(Blocks.MANGROVE_LOG);
+                output.accept(ModBlocks.MANGROVE_BRANCH);
+                output.accept(ModBlocks.MOSSY_MANGROVE_WOOD);
+                output.accept(ModBlocks.MOSSY_MANGROVE_LOG);
+                output.accept(ModBlocks.MOSSY_MANGROVE_BRANCH);
             }).build());
 
     //Util

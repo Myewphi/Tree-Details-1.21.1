@@ -25,18 +25,56 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.MOSSY_OAK_WOOD.getKey())
                 .add(ModBlocks.MOSSY_OAK_LOG.getKey())
                 .add(ModBlocks.MOSSY_OAK_BRANCH.getKey())
+
                 //BIRCH
                 .add(ModBlocks.BIRCH_BRANCH.getKey())
                 //MOSSY BIRCH
                 .add(ModBlocks.MOSSY_BIRCH_WOOD.getKey())
                 .add(ModBlocks.MOSSY_BIRCH_LOG.getKey())
                 .add(ModBlocks.MOSSY_BIRCH_BRANCH.getKey())
+
                 //SPRUCE
                 .add(ModBlocks.SPRUCE_BRANCH.getKey())
                 //MOSSY SPRUCE
                 .add(ModBlocks.MOSSY_SPRUCE_WOOD.getKey())
                 .add(ModBlocks.MOSSY_SPRUCE_LOG.getKey())
-                .add(ModBlocks.MOSSY_SPRUCE_BRANCH.getKey());
+                .add(ModBlocks.MOSSY_SPRUCE_BRANCH.getKey())
+
+                //JUNGLE
+                .add(ModBlocks.JUNGLE_BRANCH.getKey())
+                //MOSSY JUNGLE
+                .add(ModBlocks.MOSSY_JUNGLE_WOOD.getKey())
+                .add(ModBlocks.MOSSY_JUNGLE_LOG.getKey())
+                .add(ModBlocks.MOSSY_JUNGLE_BRANCH.getKey())
+
+                //ACACIA
+                .add(ModBlocks.ACACIA_BRANCH.getKey())
+                //MOSSY ACACIA
+                .add(ModBlocks.MOSSY_ACACIA_WOOD.getKey())
+                .add(ModBlocks.MOSSY_ACACIA_LOG.getKey())
+                .add(ModBlocks.MOSSY_ACACIA_BRANCH.getKey())
+
+                //DARK_OAK
+                .add(ModBlocks.DARK_OAK_BRANCH.getKey())
+                //MOSSY DARK_OAK
+                .add(ModBlocks.MOSSY_DARK_OAK_WOOD.getKey())
+                .add(ModBlocks.MOSSY_DARK_OAK_LOG.getKey())
+                .add(ModBlocks.MOSSY_DARK_OAK_BRANCH.getKey())
+
+                //CHERRY
+                .add(ModBlocks.CHERRY_BRANCH.getKey())
+                //MOSSY CHERRY
+                .add(ModBlocks.MOSSY_CHERRY_WOOD.getKey())
+                .add(ModBlocks.MOSSY_CHERRY_LOG.getKey())
+                .add(ModBlocks.MOSSY_CHERRY_BRANCH.getKey())
+
+                //MANGROVE
+                .add(ModBlocks.MANGROVE_BRANCH.getKey())
+                //MOSSY MANGROVE
+                .add(ModBlocks.MOSSY_MANGROVE_WOOD.getKey())
+                .add(ModBlocks.MOSSY_MANGROVE_LOG.getKey())
+                .add(ModBlocks.MOSSY_MANGROVE_BRANCH.getKey());
+
         this.tag(BlockTags.LOGS)
                 //OAK
                 .add(ModBlocks.OAK_BRANCH.getKey())
@@ -44,17 +82,54 @@ public class ModBlockTagProvider extends BlockTagsProvider {
                 .add(ModBlocks.MOSSY_OAK_WOOD.getKey())
                 .add(ModBlocks.MOSSY_OAK_LOG.getKey())
                 .add(ModBlocks.MOSSY_OAK_BRANCH.getKey())
+
                 //BIRCH
                 .add(ModBlocks.BIRCH_BRANCH.getKey())
                 //MOSSY BIRCH
                 .add(ModBlocks.MOSSY_BIRCH_WOOD.getKey())
                 .add(ModBlocks.MOSSY_BIRCH_LOG.getKey())
                 .add(ModBlocks.MOSSY_BIRCH_BRANCH.getKey())
+
                 //SPRUCE
                 .add(ModBlocks.SPRUCE_BRANCH.getKey())
                 //MOSSY SPRUCE
                 .add(ModBlocks.MOSSY_SPRUCE_WOOD.getKey())
                 .add(ModBlocks.MOSSY_SPRUCE_LOG.getKey())
-                .add(ModBlocks.MOSSY_SPRUCE_BRANCH.getKey());
+                .add(ModBlocks.MOSSY_SPRUCE_BRANCH.getKey())
+
+                //JUNGLE
+                .add(ModBlocks.JUNGLE_BRANCH.getKey())
+                //MOSSY JUNGLE
+                .add(ModBlocks.MOSSY_JUNGLE_WOOD.getKey())
+                .add(ModBlocks.MOSSY_JUNGLE_LOG.getKey())
+                .add(ModBlocks.MOSSY_JUNGLE_BRANCH.getKey())
+
+                //ACACIA
+                .add(ModBlocks.ACACIA_BRANCH.getKey())
+                //MOSSY ACACIA
+                .add(ModBlocks.MOSSY_ACACIA_WOOD.getKey())
+                .add(ModBlocks.MOSSY_ACACIA_LOG.getKey())
+                .add(ModBlocks.MOSSY_ACACIA_BRANCH.getKey())
+
+                //DARK_OAK
+                .add(ModBlocks.DARK_OAK_BRANCH.getKey())
+                //MOSSY DARK_OAK
+                .add(ModBlocks.MOSSY_DARK_OAK_WOOD.getKey())
+                .add(ModBlocks.MOSSY_DARK_OAK_LOG.getKey())
+                .add(ModBlocks.MOSSY_DARK_OAK_BRANCH.getKey())
+
+                //CHERRY
+                .add(ModBlocks.CHERRY_BRANCH.getKey())
+                //MOSSY CHERRY
+                .add(ModBlocks.MOSSY_CHERRY_WOOD.getKey())
+                .add(ModBlocks.MOSSY_CHERRY_LOG.getKey())
+                .add(ModBlocks.MOSSY_CHERRY_BRANCH.getKey())
+
+                //MANGROVE
+                .add(ModBlocks.MANGROVE_BRANCH.getKey())
+                //MOSSY MANGROVE
+                .add(ModBlocks.MOSSY_MANGROVE_WOOD.getKey())
+                .add(ModBlocks.MOSSY_MANGROVE_LOG.getKey())
+                .add(ModBlocks.MOSSY_MANGROVE_BRANCH.getKey());
     }
 }

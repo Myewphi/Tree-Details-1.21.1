@@ -28,16 +28,48 @@ public class ModBlockStateProvider extends BlockStateProvider {
         //MOSSY OAK
         logBlockWithItem(ModBlocks.MOSSY_OAK_WOOD.get(), ModBlocks.MOSSY_OAK_LOG.get());
         branchBlockWithItem(ModBlocks.MOSSY_OAK_BRANCH.get(), ModBlocks.MOSSY_OAK_LOG.get());
+
         //BIRCH
         branchBlockWithItem(ModBlocks.BIRCH_BRANCH.get(), Blocks.BIRCH_LOG);
         //MOSSY BIRCH
         logBlockWithItem(ModBlocks.MOSSY_BIRCH_WOOD.get(), ModBlocks.MOSSY_BIRCH_LOG.get());
         branchBlockWithItem(ModBlocks.MOSSY_BIRCH_BRANCH.get(), ModBlocks.MOSSY_BIRCH_LOG.get());
+
         //SPRUCE
         branchBlockWithItem(ModBlocks.SPRUCE_BRANCH.get(), Blocks.SPRUCE_LOG);
         //MOSSY SPRUCE
         logBlockWithItem(ModBlocks.MOSSY_SPRUCE_WOOD.get(), ModBlocks.MOSSY_SPRUCE_LOG.get());
         branchBlockWithItem(ModBlocks.MOSSY_SPRUCE_BRANCH.get(), ModBlocks.MOSSY_SPRUCE_LOG.get());
+
+        //JUNGLE
+        branchBlockWithItem(ModBlocks.JUNGLE_BRANCH.get(), Blocks.JUNGLE_LOG);
+        //MOSSY JUNGLE
+        logBlockWithItem(ModBlocks.MOSSY_JUNGLE_WOOD.get(), ModBlocks.MOSSY_JUNGLE_LOG.get());
+        branchBlockWithItem(ModBlocks.MOSSY_JUNGLE_BRANCH.get(), ModBlocks.MOSSY_JUNGLE_LOG.get());
+
+        //ACACIA
+        branchBlockWithItem(ModBlocks.ACACIA_BRANCH.get(), Blocks.ACACIA_LOG);
+        //MOSSY ACACIA
+        logBlockWithItem(ModBlocks.MOSSY_ACACIA_WOOD.get(), ModBlocks.MOSSY_ACACIA_LOG.get());
+        branchBlockWithItem(ModBlocks.MOSSY_ACACIA_BRANCH.get(), ModBlocks.MOSSY_ACACIA_LOG.get());
+
+        //DARK_OAK
+        branchBlockWithItem(ModBlocks.DARK_OAK_BRANCH.get(), Blocks.DARK_OAK_LOG);
+        //MOSSY DARK_OAK
+        logBlockWithItem(ModBlocks.MOSSY_DARK_OAK_WOOD.get(), ModBlocks.MOSSY_DARK_OAK_LOG.get());
+        branchBlockWithItem(ModBlocks.MOSSY_DARK_OAK_BRANCH.get(), ModBlocks.MOSSY_DARK_OAK_LOG.get());
+
+        //CHERRY
+        branchBlockWithItem(ModBlocks.CHERRY_BRANCH.get(), Blocks.CHERRY_LOG);
+        //MOSSY CHERRY
+        logBlockWithItem(ModBlocks.MOSSY_CHERRY_WOOD.get(), ModBlocks.MOSSY_CHERRY_LOG.get());
+        branchBlockWithItem(ModBlocks.MOSSY_CHERRY_BRANCH.get(), ModBlocks.MOSSY_CHERRY_LOG.get());
+
+        //MANGROVE
+        branchBlockWithItem(ModBlocks.MANGROVE_BRANCH.get(), Blocks.MANGROVE_LOG);
+        //MOSSY MANGROVE
+        logBlockWithItem(ModBlocks.MOSSY_MANGROVE_WOOD.get(), ModBlocks.MOSSY_MANGROVE_LOG.get());
+        branchBlockWithItem(ModBlocks.MOSSY_MANGROVE_BRANCH.get(), ModBlocks.MOSSY_MANGROVE_LOG.get());
     }
 
     private void blockWithItem(DeferredBlock<?> deferredBlock){

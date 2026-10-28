@@ -50,6 +50,61 @@ public class ModBlocks {
     public static final DeferredBlock<Block> MOSSY_SPRUCE_BRANCH = registerBlock("mossy_spruce_branch",
             () -> new BranchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.SPRUCE_PLANKS).ignitedByLava()));
 
+    //JUNGLE
+    public static final DeferredBlock<Block> JUNGLE_BRANCH = registerBlock("jungle_branch",
+            () -> new BranchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.JUNGLE_PLANKS).ignitedByLava()));
+    //MOSSY JUNGLE
+    public static final DeferredBlock<RotatedPillarBlock> MOSSY_JUNGLE_WOOD= registerBlock("mossy_jungle_wood",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.JUNGLE_WOOD).ignitedByLava()));
+    public static final DeferredBlock<RotatedPillarBlock> MOSSY_JUNGLE_LOG = registerBlock("mossy_jungle_log",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.JUNGLE_LOG).ignitedByLava()));
+    public static final DeferredBlock<Block> MOSSY_JUNGLE_BRANCH = registerBlock("mossy_jungle_branch",
+            () -> new BranchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.JUNGLE_PLANKS).ignitedByLava()));
+
+    //ACACIA
+    public static final DeferredBlock<Block> ACACIA_BRANCH = registerBlock("acacia_branch",
+            () -> new BranchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_PLANKS).ignitedByLava()));
+    //MOSSY ACACIA
+    public static final DeferredBlock<RotatedPillarBlock> MOSSY_ACACIA_WOOD= registerBlock("mossy_acacia_wood",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_WOOD).ignitedByLava()));
+    public static final DeferredBlock<RotatedPillarBlock> MOSSY_ACACIA_LOG = registerBlock("mossy_acacia_log",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_LOG).ignitedByLava()));
+    public static final DeferredBlock<Block> MOSSY_ACACIA_BRANCH = registerBlock("mossy_acacia_branch",
+            () -> new BranchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.ACACIA_PLANKS).ignitedByLava()));
+
+    //DARK OAK
+    public static final DeferredBlock<Block> DARK_OAK_BRANCH = registerBlock("dark_oak_branch",
+            () -> new BranchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_PLANKS).ignitedByLava()));
+    //MOSSY DARK OAK
+    public static final DeferredBlock<RotatedPillarBlock> MOSSY_DARK_OAK_WOOD= registerBlock("mossy_dark_oak_wood",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_WOOD).ignitedByLava()));
+    public static final DeferredBlock<RotatedPillarBlock> MOSSY_DARK_OAK_LOG = registerBlock("mossy_dark_oak_log",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_LOG).ignitedByLava()));
+    public static final DeferredBlock<Block> MOSSY_DARK_OAK_BRANCH = registerBlock("mossy_dark_oak_branch",
+            () -> new BranchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.DARK_OAK_PLANKS).ignitedByLava()));
+
+    //CHERRY
+    public static final DeferredBlock<Block> CHERRY_BRANCH = registerBlock("cherry_branch",
+            () -> new BranchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_PLANKS).ignitedByLava()));
+    //MOSSY CHERRY
+    public static final DeferredBlock<RotatedPillarBlock> MOSSY_CHERRY_WOOD= registerBlock("mossy_cherry_wood",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_WOOD).ignitedByLava()));
+    public static final DeferredBlock<RotatedPillarBlock> MOSSY_CHERRY_LOG = registerBlock("mossy_cherry_log",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_LOG).ignitedByLava()));
+    public static final DeferredBlock<Block> MOSSY_CHERRY_BRANCH = registerBlock("mossy_cherry_branch",
+            () -> new BranchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.CHERRY_PLANKS).ignitedByLava()));
+
+    //MANGROVE
+    public static final DeferredBlock<Block> MANGROVE_BRANCH = registerBlock("mangrove_branch",
+            () -> new BranchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_PLANKS).ignitedByLava()));
+    //MOSSY MANGROVE
+    public static final DeferredBlock<RotatedPillarBlock> MOSSY_MANGROVE_WOOD= registerBlock("mossy_mangrove_wood",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_WOOD).ignitedByLava()));
+    public static final DeferredBlock<RotatedPillarBlock> MOSSY_MANGROVE_LOG = registerBlock("mossy_mangrove_log",
+            () -> new RotatedPillarBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_LOG).ignitedByLava()));
+    public static final DeferredBlock<Block> MOSSY_MANGROVE_BRANCH = registerBlock("mossy_mangrove_branch",
+            () -> new BranchBlock(BlockBehaviour.Properties.ofFullCopy(Blocks.MANGROVE_PLANKS).ignitedByLava()));
+
     private static <T extends Block> DeferredBlock<T> registerBlock(String name, Supplier<T> block) {
         DeferredBlock<T> toReturn = BLOCKS.register(name, block);
         registerBlockItem(name, toReturn);
